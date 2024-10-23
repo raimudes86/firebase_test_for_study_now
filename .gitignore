@@ -36,3 +36,6 @@
 
 # Ignore the service account file
 /config/service_account.json
+
+# Ignore api key of firebase
+/env.js
