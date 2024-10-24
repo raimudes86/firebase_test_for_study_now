@@ -1,7 +1,7 @@
 import { Controller } from "@hotwired/stimulus"
-import { initializeApp, getApp } from "firebase/app"
+import { getApp } from "firebase/app"
 import { getAuth, onAuthStateChanged, signInWithEmailAndPassword, signOut } from "firebase/auth"
-import { firebaseConfig } from "env"
+import { getFirebaseAuth } from "../firebase"
 
 let idToken = null;
 let initialized = false;
@@ -17,8 +17,7 @@ export default class extends Controller {
   initialize() {
     if (initialized) return;
 
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
+    const auth = getFirebaseAuth();
 
     onAuthStateChanged(auth, async (user) => {
       if (user) {

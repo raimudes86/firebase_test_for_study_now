@@ -34,6 +34,9 @@ gem "bootsnap", require: false
 # firebase-admin-sdk
 gem "firebase-admin-sdk"
 
+# fire store
+gem "google-cloud-firestore"
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 

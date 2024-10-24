@@ -7,7 +7,7 @@ module FirebaseAdmin
       FIREBASE_SERVICE_ACCOUNT_FILE = Rails.root.join("config", "service_account.json")
 
       # Verify id token
-      
+
       # @param id_token [String] Firebase id token
       # @return [hash] decoded token
       def verify_id_token!(id_token)
@@ -24,4 +24,3 @@ module FirebaseAdmin
     end
   end
 end
-
